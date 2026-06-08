@@ -1,0 +1,195 @@
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: #f5f7fb;
+    overflow: hidden;
+}
+.home-logout-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 12px;
+    background: #ef4444;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+/* Main Layout */
+.home-container {
+    display: flex;
+    gap: 40px;
+    padding: 40px;
+    height: calc(100vh - 80px);
+}
+
+/* LEFT SIDE */
+.input-home {
+    width: 35%;
+    position: sticky;
+    top: 20px;
+    align-self:center;
+}
+
+form {
+    background: white;
+    padding: 30px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+form h2 {
+    margin: 0;
+    color: #1e293b;
+}
+
+/* Inputs */
+form input,
+form textarea {
+    border: 1px solid #dbe2ea;
+    border-radius: 14px;
+    padding: 14px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37,99,235,.15);
+}
+
+form textarea {
+    resize: none;
+    min-height: 120px;
+}
+
+/* Add Button */
+form button {
+    padding: 14px;
+    border: none;
+    border-radius: 14px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+form button:hover {
+    background: #1e40af;
+}
+
+form button:hover {
+    transform: translateY(-2px);
+}
+
+/* RIGHT SIDE */
+.todos-container {
+    width: 60%;
+    overflow-y: auto;
+    padding-right: 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+}
+
+/* Scrollbar */
+.todos-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.todos-container::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 20px;
+}
+
+/* Todo Cards */
+.todo-card {
+    background: white;
+    padding: 24px;
+    border-radius: 20px;
+    box-shadow:
+        0 4px 20px rgba(0,0,0,0.05);
+
+    transition: .3s;
+}
+
+.todo-card:hover {
+    transform: translateY(-5px);
+}
+
+.todo-title {
+    margin: 0;
+    color: #0f172a;
+    font-size: 22px;
+}
+
+.todo-description {
+    color: #64748b;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+/* Buttons */
+.button-edit-delete {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.edit-button,
+.delete-button {
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.edit-button {
+    background: #2563eb;
+transition: 0.3s;
+}
+.edit-button:hover {
+    background: #1e40af;
+}
+
+.delete-button {
+    background: #ef4444;
+    transition: 0.3s;
+}
+.delete-button:hover {
+    background: #b91c1c;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+    body {
+        overflow: auto;
+    }
+
+    .dashboard-layout {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .form-section,
+    .todos-container {
+        width: 100%;
+    }
+
+    .todos-container {
+        overflow: visible;
+    }
+}
